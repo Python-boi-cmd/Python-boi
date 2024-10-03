@@ -1,8 +1,7 @@
 import streamlit as st
 
 
-
-st.st.set_page_config(page_title="3 Question Quiz", page_icon=":small_airplane:", layout="wide")
+st.set_page_config(page_title="3 Question Quiz", page_icon=":small_airplane:", layout="wide")
 
 
 st.subheader("Enter your numbers to create the sum of them using addition.")
