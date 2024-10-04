@@ -1,0 +1,14 @@
+import streamlit as st
+
+catcounter = 0
+
+st.set_page_config(page_title="Math Quiz", page_icon=":small_airplane:", layout="wide")
+
+st.subheader("hello! would you like cat or math quiz")
+st.write("cat just says cat")
+st.write("math quiz button leads you to math quiz")
+
+st.button("cat")
+if st.button("cat"):
+    catcounter += 1
+    st.write(f"cat counter = {catcounter}")
