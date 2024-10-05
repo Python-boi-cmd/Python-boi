@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import random
 
 st.set_page_config(page_title="Number Generator", page_icon=":small_airplane:", layout="wide")
