@@ -1,9 +1,11 @@
 import streamlit as st
 import random
 st.set_page_config(page_title="Number Generator", page_icon=":small_airplane:", layout="wide")
-st.write("The number you enter will be selected for the generator for example 1 - (input of user)")
-y = st.number_input("Enter a Number: ")
-st.write(f"The number you selected is {y}")
-st.write(f"1 - {y}")
-x = random.randint(1,{y})
-st.write(f"The selected number from the generator is {x}")
+x = random.randint(0,10)
+y = random.randint(0,10)
+st.write(f"What is {x} + {y}?")
+z = st.number_input("Answer here: ")
+if (z) == (x + y):
+    st.write("Correct!")
+else:
+    st.write("Wrong.")
