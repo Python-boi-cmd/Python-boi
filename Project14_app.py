@@ -9,3 +9,8 @@ if (z) == (x + y):
     st.write("Correct!")
 else:
     st.write("Wrong.")
+
+if st.button("Submit"):
+    print("Correct!")
+else:
+    print("Wrong")
