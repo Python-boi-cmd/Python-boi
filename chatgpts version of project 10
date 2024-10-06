@@ -1,0 +1,52 @@
+import random
+from colorama import Fore, Back, Style
+
+def ask_question(question, correct_answer):
+    user_answer = input(question)
+    return float(user_answer) == correct_answer
+
+def main():
+    score = 0
+    questions = [
+        (random.randint(0, 10), random.randint(0, 10), " + "),
+        (random.randint(0, 10), random.randint(0, 10), " * "),
+        (random.randint(0, 10), random.randint(0, 10), " * "),
+        (random.randint(0, 5), random.randint(0, 10), " - "),
+        (random.randint(1, 10), random.randint(1, 10), " / "),
+        (random.randint(0, 10), random.randint(0, 10), " - ")
+    ]
+    
+    for x, y, op in questions:
+        if op == " + ":
+            correct_answer = x + y
+            if ask_question(f"What is {x} {op} {y}? ", correct_answer):
+                score += 1
+                print(f"{Fore.BLUE}{Back.LIGHTGREEN_EX}Correct! Your score is {score}!")
+            else:
+                print(f"{Fore.LIGHTRED_EX}{Back.LIGHTBLACK_EX}Wrong, the correct answer was {correct_answer}.")
+        
+        elif op == " * ":
+            correct_answer = x * y
+            if ask_question(f"What is {x} {op} {y}? ", correct_answer):
+                score += 1
+                print(f"{Fore.BLUE}{Back.LIGHTGREEN_EX}Correct! Your score is {score}!")
+            else:
+                print(f"{Fore.LIGHTRED_EX}{Back.LIGHTBLACK_EX}Wrong, the correct answer was {correct_answer}.")
+        
+        elif op == " - ":
+            correct_answer = x - y
+            if ask_question(f"What is {x} {op} {y}? ", correct_answer):
+                score += 1
+                print(f"{Fore.BLUE}{Back.LIGHTGREEN_EX}Correct! Your score is {score}!")
+            else:
+                print(f"{Fore.LIGHTRED_EX}{Back.LIGHTBLACK_EX}Wrong, the correct answer was {correct_answer}.")
+        
+        elif op == " / ":
+            correct_answer = x / y
+            if ask_question(f"What is {x} {op} {y}? ", correct_answer):
+                score += 1
+                print(f"{Fore.BLUE}{Back.LIGHTGREEN_EX}Correct! Your score is {score}!")
+            else:
+                print(f"{Fore.LIGHTRED_EX}{Back.LIGHTBLACK_EX}Wrong, the correct answer was {correct_answer}.")
+    
+    print(f"Your final score is {score}.")
