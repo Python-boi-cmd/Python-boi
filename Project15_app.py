@@ -12,7 +12,7 @@ sum_result = x + y
 difference_result = x / y
 product_result = x * y
 division_result = x / y
-if division_result < 1:
+if division_result != 0:
     st.write("Undefined number, cannot divide by zero")
 else:
     st.write(f"The answer of {x} / {y} is {x / y}")
